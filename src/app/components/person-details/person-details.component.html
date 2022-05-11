@@ -1,0 +1,90 @@
+<div class="row">
+    <div class="offset-2 col-8">
+        <h1 class="row mt-5 mb-5 d-flex justify-content-center">{{person.name.firstname}} {{person.name.lastname}}</h1>
+        <form #f="ngForm">
+
+            <div class="mb-3">
+                <label for="id" class="form-label">Id</label>
+                <input disabled class="form-control" ngModel [(ngModel)]="person.id" name="id" type="text">
+            </div>
+
+            <div class="row mb-3">
+
+                <div class="col">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" #firstName="ngModel" disabled ngModel
+                        [(ngModel)]="person.name.firstname" name="firstName" required>
+                </div>
+
+                <div class="col">
+                    <label for="lastNname" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" #lastNname="ngModel" disabled ngModel
+                        [(ngModel)]="person.name.lastname" name="lastNname" required>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" #username="ngModel" disabled ngModel
+                    [(ngModel)]="person.username" name="username" required>
+            </div>
+
+            <div class="row mb-3">
+
+                <div class="col">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" #email="ngModel" disabled ngModel
+                        [(ngModel)]="person.email" name="email" required>
+                </div>
+
+                <div class="col">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="text" class="form-control" #phone="ngModel" disabled ngModel [(ngModel)]="person.phone"
+                        name="phone" required>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <label class="form-label mt-3 mb-3 col-form-label-lg">Address</label>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" class="form-control" #city="ngModel" disabled ngModel
+                        [(ngModel)]="person.address.city" name="city" required>
+                </div>
+
+                <div class="col">
+                    <label for="street" class="form-label">Street</label>
+                    <input type="text" class="form-control" #street="ngModel" disabled ngModel
+                        [(ngModel)]="person.address.street" name="street" required>
+                </div>
+
+                <div class="col">
+                    <label for="number" class="form-label">Num</label>
+                    <input type="number" class="form-control" #number="ngModel" disabled ngModel
+                        [(ngModel)]="person.address.number" name="number" required>
+                </div>
+
+                <div class="col">
+                    <label for="zipcode" class="form-label">Zipcode</label>
+                    <input type="text" class="form-control" #zipcode="ngModel" disabled ngModel
+                        [(ngModel)]="person.address.zipcode" name="zipcode" required>
+                </div>
+
+            </div>
+
+<div class="mt-5 d-flex justify-content-center">
+
+    <a class="link-secondary" routerLink="/people">
+        back
+    </a>
+</div>
+
+        </form>
+    </div>
+</div>
